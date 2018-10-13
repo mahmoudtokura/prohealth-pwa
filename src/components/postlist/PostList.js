@@ -7,7 +7,7 @@ class PostList extends Component {
     posts: []
   };
   componentDidMount() {
-    axios.get(`https://jsonplaceholder.typicode.com/posts`).then(res => {
+    axios.get(`http://prohealthhmo.com.ng/wp-json/wp/v2/posts`).then(res => {
       this.setState({ posts: res.data });
     });
   }

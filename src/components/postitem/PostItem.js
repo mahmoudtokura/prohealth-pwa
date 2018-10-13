@@ -1,16 +1,40 @@
 import React from "react";
 import Truncate from "react-truncate";
+import html from "react-inner-html";
 
 const PostItem = ({ post }) => {
+  const createMarkup = () => {
+    return { __html: post.content.rendered };
+  };
+
+  const setContent = () => {
+    return <p dangerouslySetInnerHTML={createMarkup()} />;
+  };
+
   return (
     <div className="col s12 m6 l4">
       <div className="card">
         <div className="card-image">
-          <img src="https://images.unsplash.com/photo-1530268729831-4b0b9e170218?ixlib=rb-0.3.5&s=f11286ba014672fc0026e5c2a292102c&auto=format&fit=crop&w=1050&q=80" />
-          <span className="card-title">{post.title}</span>
+          <img
+            src={
+              post.better_featured_image
+                ? post.better_featured_image.source_url
+                : "https://images.unsplash.com/photo-1528977695568-bd5e5069eb61?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a9c071a597ac682d3682549c12501c63&auto=format&fit=crop&w=1050&q=80"
+            }
+            alt=""
+          />
+          <span className="card-title">
+            {post.title && post.title.rendered}
+          </span>
         </div>
         <div className="card-content">
-          <Truncate lines={1}>{post.body}</Truncate>
+          <Truncate lines={1}>
+            {post.excerpt.rendered ? (
+              <p {...html(post.excerpt.rendered)} />
+            ) : (
+              <p>An informative post click on "read post" bellow for details</p>
+            )}
+          </Truncate>
         </div>
         <div className="card-action ">
           <a href="#" className="blue-text">

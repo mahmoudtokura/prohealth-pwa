@@ -3,34 +3,34 @@ import React from "react";
 const FloatingMenu = () => {
   return (
     <div>
-      <div class="fixed-action-btn toolbar hide-on-large-only">
-        <a class="btn-floating btn-large blue">
-          <i class="large material-icons">menu</i>
+      <div className="fixed-action-btn toolbar hide-on-large-only">
+        <a className="btn-floating btn-large blue">
+          <i className="large material-icons">menu</i>
         </a>
         <ul>
-          <li class="waves-effect waves-light">
+          <li className="waves-effect waves-light">
             <a
               href="#!"
               onClick={() => {
                 alert("You clicked posts");
               }}
             >
-              <i class="material-icons">local_library</i>
+              <i className="material-icons">library_books</i>
             </a>
           </li>
-          <li class="waves-effect waves-light">
+          <li className="waves-effect waves-light">
             <a href="#!">
-              <i class="material-icons">create</i>
+              <i className="material-icons">people</i>
             </a>
           </li>
-          <li class="waves-effect waves-light">
+          <li className="waves-effect waves-light">
             <a href="#!">
-              <i class="material-icons">contacts</i>
+              <i className="material-icons">location_on</i>
             </a>
           </li>
-          <li class="waves-effect waves-light">
+          <li className="waves-effect waves-light">
             <a href="#!">
-              <i class="material-icons">info</i>
+              <i className="material-icons">info</i>
             </a>
           </li>
         </ul>
