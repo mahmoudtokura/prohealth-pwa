@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FloatingMenu = () => {
   return (
@@ -9,29 +10,24 @@ const FloatingMenu = () => {
         </a>
         <ul>
           <li className="waves-effect waves-light">
-            <a
-              href="#!"
-              onClick={() => {
-                alert("You clicked posts");
-              }}
-            >
+            <Link to="/">
               <i className="material-icons">library_books</i>
-            </a>
+            </Link>
           </li>
           <li className="waves-effect waves-light">
-            <a href="#!">
+            <Link to="/customerservice">
               <i className="material-icons">people</i>
-            </a>
+            </Link>
           </li>
           <li className="waves-effect waves-light">
-            <a href="#!">
+            <Link to="/location">
               <i className="material-icons">location_on</i>
-            </a>
+            </Link>
           </li>
           <li className="waves-effect waves-light">
-            <a href="#!">
+            <Link to="/info">
               <i className="material-icons">info</i>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import PostItem from "../postitem/PostItem";
 import axios from "axios";
+import Preloader from "../common/Preloader";
 
 class PostList extends Component {
   state = {
-    posts: []
+    posts: [],
+    isLoaded: false
   };
   componentDidMount() {
     axios.get(`http://prohealthhmo.com.ng/wp-json/wp/v2/posts`).then(res => {
@@ -16,9 +18,13 @@ class PostList extends Component {
     const { posts } = this.state;
     return (
       <div className="row">
-        {posts.map(post => {
-          return <PostItem key={post.id} post={post} />;
-        })}
+        {posts.length ? (
+          posts.map(post => {
+            return <PostItem key={post.id} post={post} />;
+          })
+        ) : (
+          <Preloader />
+        )}
       </div>
     );
   }
