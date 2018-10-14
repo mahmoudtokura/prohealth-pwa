@@ -9,7 +9,7 @@ class Post extends Component {
     console.log(post);
     return (
       <div className="row">
-        <div className="col s12 m6">
+        <div className="col s12 m12">
           <div className="card">
             <div className="card-image">
               <img
@@ -20,7 +20,7 @@ class Post extends Component {
                 }
                 alt=""
               />
-              <ShareFAB />
+              <ShareFAB post={post} />
             </div>
             <div className="card-content">
               <span className="card-title">
@@ -32,7 +32,7 @@ class Post extends Component {
               </span>
               <div>
                 {post.content.rendered ? (
-                  <p {...html(post.content.rendered)} />
+                  <p {...html(post.content.rendered)} className="ext" />
                 ) : (
                   <div>
                     <p>

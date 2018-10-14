@@ -8,7 +8,6 @@ import CustomerService from "./components/customerService/CustomerService";
 import Location from "./components/location/Location";
 import Info from "./components/info/Info";
 import Post from "./components/posts/Post";
-import PostItem from "./components/posts/PostItem";
 
 class App extends Component {
   render() {
