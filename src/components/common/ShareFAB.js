@@ -11,6 +11,7 @@ import {
 } from "react-share";
 
 const ShareFAB = props => {
+  const { title, link } = props.post;
   return (
     <div
       className="fixed-action-btn halfway-fab horizontal click-to-toggle"
@@ -22,28 +23,57 @@ const ShareFAB = props => {
       <ul>
         <li>
           <a className="btn-floating">
-            <FacebookShareButton quote={props.title} url={props.link}>
+            <FacebookShareButton
+              quote={
+                title.rendered
+                  ? title.rendered
+                  : "An awesome post from Prohealth HMO"
+              }
+              url={link}
+            >
               <FacebookIcon size={"100%"} round={true} />
             </FacebookShareButton>
           </a>
         </li>
         <li>
           <a className="btn-floating">
-            <TwitterShareButton title={props.title} via={props.link}>
+            <TwitterShareButton
+              title={
+                title.rendered
+                  ? title.rendered
+                  : "An awesome post from Prohealth HMO"
+              }
+              url={link}
+            >
               <TwitterIcon size={"100%"} round={true} />
             </TwitterShareButton>
           </a>
         </li>
         <li>
           <a className="btn-floating">
-            <WhatsappShareButton title={props.title} url={props.link}>
+            <WhatsappShareButton
+              title={
+                title.rendered
+                  ? title.rendered
+                  : "An awesome post from Prohealth HMO"
+              }
+              url={link}
+            >
               <WhatsappIcon size={"100%"} round={true} />
             </WhatsappShareButton>
           </a>
         </li>
         <li>
           <a className="btn-floating">
-            <EmailShareButton subject={props.title} body={props.link}>
+            <EmailShareButton
+              subject={
+                title.rendered
+                  ? title.rendered
+                  : "An awesome post from Prohealth HMO"
+              }
+              url={link}
+              body={link}
+            >
               <EmailIcon size={"100%"} round={true} />
             </EmailShareButton>
           </a>
