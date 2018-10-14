@@ -5,7 +5,7 @@ const FloatingMenu = () => {
   return (
     <div>
       <div className="fixed-action-btn toolbar hide-on-large-only">
-        <a className="btn-floating btn-large blue">
+        <a className="btn-floating btn-large blue pulse">
           <i className="large material-icons">menu</i>
         </a>
         <ul>

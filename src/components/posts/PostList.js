@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PostItem from "../postitem/PostItem";
+import PostItem from "./PostItem";
 import axios from "axios";
 import Preloader from "../common/Preloader";
 
@@ -14,13 +14,12 @@ class PostList extends Component {
     });
   }
   render() {
-    console.log(this.state.posts);
     const { posts } = this.state;
     return (
       <div className="row">
         {posts.length ? (
           posts.map(post => {
-            return <PostItem key={post.id} post={post} />;
+            return <PostItem key={post.id} post={post} params={this.props} />;
           })
         ) : (
           <Preloader />
