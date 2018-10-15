@@ -16,7 +16,7 @@ class PostList extends Component {
   render() {
     const { posts } = this.state;
     return (
-      <div className="row">
+      <div className="row container">
         {posts.length ? (
           posts.map(post => {
             return <PostItem key={post.id} post={post} params={this.props} />;

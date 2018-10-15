@@ -8,6 +8,7 @@ import CustomerService from "./components/customerService/CustomerService";
 import Location from "./components/location/Location";
 import Info from "./components/info/Info";
 import Post from "./components/posts/Post";
+import Footer from "./components/footer/Footer";
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path="/info" component={Info} />
             <Route path="/post" render={post => <Post {...post} />} />
           </Switch>
+          <Footer />
         </div>
       </BrowserRouter>
     );

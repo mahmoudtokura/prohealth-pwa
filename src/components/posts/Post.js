@@ -8,9 +8,9 @@ class Post extends Component {
     const { post } = this.props.location.state;
     console.log(post);
     return (
-      <div className="row">
+      <div className="row container">
         <div className="col s12 m12">
-          <div className="card">
+          <div className="card z-depth-0">
             <div className="card-image">
               <img
                 src={
@@ -19,7 +19,9 @@ class Post extends Component {
                     : "https://images.unsplash.com/photo-1528977695568-bd5e5069eb61?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a9c071a597ac682d3682549c12501c63&auto=format&fit=crop&w=1050&q=80"
                 }
                 alt=""
+                style={{}}
               />
+              <hr />
               <ShareFAB post={post} />
             </div>
             <div className="card-content">

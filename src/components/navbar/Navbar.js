@@ -4,19 +4,19 @@ const Navbar = () => {
   return (
     <div className="navbar-fixed">
       <nav className="blue">
-        <div className="nav-wrapper">
+        <div className="nav-wrapper container">
           <a href="#" className="brand-logo">
-            Prohealth App
+            Prohealth
           </a>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>
-              <a href="sass.html">Sass</a>
+              <a href="sass.html">About</a>
             </li>
             <li>
-              <a href="badges.html">Components</a>
+              <a href="badges.html">Management</a>
             </li>
             <li>
-              <a href="collapsible.html">JavaScript</a>
+              <a href="collapsible.html">Contact</a>
             </li>
           </ul>
         </div>
