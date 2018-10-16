@@ -8,6 +8,8 @@ self.addEventListener("install", event => {
         cache.addAll([
           "/materialize.min.css",
           "/materialize.min.js",
+          "/google-font-icons.css",
+          "/google-font-icons.woff2",
           "/jquery-3.2.1.min.js",
           "/static/js/bundle.js",
           "/static/js/main.chunk.js",
