@@ -14,6 +14,7 @@ self.addEventListener("install", event => {
           "/static/js/bundle.js",
           "/static/js/main.chunk.js",
           "/static/js/0.chunk.js",
+          "/static/media/post_place_holder.ebc88f19.jpg",
           "/index.html",
           "/"
         ])
@@ -25,6 +26,20 @@ self.addEventListener("fetch", function(event) {
   event.respondWith(
     caches.match(event.request).then(function(responce) {
       if (responce) return responce;
+
+      var fetchRequest = event.request.clone();
+      return fetch(fetchRequest).then(fetchResponce => {
+        if (fetchResponce || fetchResponce.status !== 0) {
+          return fetchResponce;
+        } else {
+          var responceToCache = fetchResponce.clone();
+          caches.open(cacheName).then(function(cache) {
+            cache.put(event.request, responceToCache);
+          });
+
+          return fetchResponce;
+        }
+      });
     })
   );
 });

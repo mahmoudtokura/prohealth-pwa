@@ -3,6 +3,7 @@ import Truncate from "react-truncate";
 import html from "react-inner-html";
 import { Link, BrowserRouter } from "react-router-dom";
 import { withRouter } from "react-router";
+import post_place_holder from "./post_place_holder.jpg";
 
 const PostItem = ({ post, params }) => {
   const getPost = e => {
@@ -19,7 +20,7 @@ const PostItem = ({ post, params }) => {
             src={
               post.better_featured_image
                 ? post.better_featured_image.source_url
-                : "https://images.unsplash.com/photo-1528977695568-bd5e5069eb61?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a9c071a597ac682d3682549c12501c63&auto=format&fit=crop&w=1050&q=80"
+                : post_place_holder
             }
             alt=""
           />
