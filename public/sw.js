@@ -15,6 +15,8 @@ self.addEventListener("install", event => {
           "/static/js/main.chunk.js",
           "/static/js/0.chunk.js",
           "/static/media/post_place_holder.ebc88f19.jpg",
+          "/static/media/health_plan.e2cd94d6.jpg",
+          "/static/media/change_hospital.47358b27.jpg",
           "/index.html",
           "/"
         ])

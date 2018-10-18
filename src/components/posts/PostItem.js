@@ -2,7 +2,6 @@ import React from "react";
 import Truncate from "react-truncate";
 import html from "react-inner-html";
 import { Link, BrowserRouter } from "react-router-dom";
-import { withRouter } from "react-router";
 import post_place_holder from "./post_place_holder.jpg";
 
 const PostItem = ({ post, params }) => {
@@ -57,4 +56,4 @@ const PostItem = ({ post, params }) => {
   );
 };
 
-export default withRouter(PostItem);
+export default PostItem;

@@ -9,6 +9,8 @@ import Location from "./components/location/Location";
 import Info from "./components/info/Info";
 import Post from "./components/posts/Post";
 import Footer from "./components/footer/Footer";
+import HealthPlans from "./components/customerService/HealthPlans";
+import ChangeHospital from "./components/customerService/ChangeHospital";
 
 class App extends Component {
   render() {
@@ -23,6 +25,16 @@ class App extends Component {
             <Route exact path="/customerservice" component={CustomerService} />
             <Route exact path="/location" component={Location} />
             <Route exact path="/info" component={Info} />
+            <Route
+              exact
+              path="/customerservice/healthplans"
+              component={HealthPlans}
+            />
+            <Route
+              exact
+              path="/customerservice/changehospital"
+              component={ChangeHospital}
+            />
             <Route path="/post" render={post => <Post {...post} />} />
           </Switch>
           <Footer />
