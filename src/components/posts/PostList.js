@@ -47,7 +47,7 @@ class PostList extends Component {
     const { posts, isOffline } = this.state;
     return (
       <div className="row container">
-        {posts.length ? (
+        {posts ? (
           posts.map(post => {
             return <PostItem key={post.id} post={post} params={this.props} />;
           })
