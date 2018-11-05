@@ -21,7 +21,7 @@ class PostList extends Component {
   componentDidMount() {
     window.addEventListener("offline", this.showOfflineIndicator);
     axios
-      .get(`http://prohealthhmo.com.ng/wp-json/wp/v2/posts`)
+      .get(`https://prohealthhmo.com.ng/wp-json/wp/v2/posts`)
       .then(res => {
         this.setState({ posts: res.data, isLoaded: true });
         localStorage.setItem("prohealthpost", JSON.stringify(res.data));
